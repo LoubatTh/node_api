@@ -1,28 +1,23 @@
-// /* eslint-disable no-console */
-// const express = require('express');
-// const bodyParser = require('body-parser');
+/* eslint-disable no-console */
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
 
-// const todoRoutes = require('./routes/todo');
+const actorRoutes = require("./routes/actor.routes");
+const genreRoutes = require("./routes/genre.routes");
+const filmRoutes = require("./routes/film.routes");
 
-// const app = express();
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// const HTTP_PORT = 8000;
+const HTTP_PORT = process.env.PORT;
 
-// app.listen(HTTP_PORT, () => {
-//     console.log(`Server running on port ${HTTP_PORT}`);
-// });
+app.use("/api/actor", actorRoutes);
+app.use("/api/genre", genreRoutes);
+app.use("/api/film", filmRoutes);
 
-// // Basic route
-// app.get('/', (req, res) => {
-//     res.json({ message: 'Hello World' });
-// });
+app.listen(HTTP_PORT, () => {
+  console.log(`Server running on port ${HTTP_PORT}`);
+});
 
-// // Routes "Todo"
-// app.use('/api/todo', todoRoutes);
-
-// // Fallback route
-// app.use((req, res) => {
-//     res.status(404);
-// });
