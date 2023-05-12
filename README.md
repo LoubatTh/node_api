@@ -26,9 +26,9 @@ NodeJS avec le framework Express selon les spécifications suivantes.
 
 | Status                            | Réalisation                                                          | Points |
 | --------------------------------- | -------------------------------------------------------------------- | ------ |
-| <input type="checkbox" checked /> | Mise en place d'une API NodeJS + ExpressJS écoutant sur le port 8000 | 1      |
-| <input type="checkbox" checked /> | Respect du format d'URL                                              | 0.5    |
-| <input type="checkbox" checked /> | Sécurisation via API Key                                             | 2      |
-| <input type="checkbox" checked/>  | Réponses au format JSON                                              | 0.5    |
-| <input type="checkbox" />         | Validation des modifications via ETag                                | 3      |
-| <input type="checkbox" checked /> | 13 points d'entrée                                                   | 13     |
+| ✅ | Mise en place d'une API NodeJS + ExpressJS écoutant sur le port 8000 | 1      |
+| ✅ /> | Respect du format d'URL                                              | 0.5    |
+| ✅ /> | Sécurisation via API Key                                             | 2      |
+| ✅/>  | Réponses au format JSON                                              | 0.5    |
+| ❌ />         | Validation des modifications via ETag                                | 3      |
+| ✅ /> | 13 points d'entrée                                                   | 13     |
