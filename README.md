@@ -24,11 +24,11 @@ NodeJS avec le framework Express selon les spécifications suivantes.
 
 ## Critères de notation
 
-| Status                            | Réalisation                                                          | Points |
-| --------------------------------- | -------------------------------------------------------------------- | ------ |
-| ✅ | Mise en place d'une API NodeJS + ExpressJS écoutant sur le port 8000 | 1      |
-| ✅ /> | Respect du format d'URL                                              | 0.5    |
-| ✅ /> | Sécurisation via API Key                                             | 2      |
-| ✅/>  | Réponses au format JSON                                              | 0.5    |
-| ❌ />         | Validation des modifications via ETag                                | 3      |
-| ✅ /> | 13 points d'entrée                                                   | 13     |
+| Status | Réalisation                                                          | Points |
+| ------ | -------------------------------------------------------------------- | ------ |
+| ✅     | Mise en place d'une API NodeJS + ExpressJS écoutant sur le port 8000 | 1      |
+| ✅     | Respect du format d'URL                                              | 0.5    |
+| ✅     | Sécurisation via API Key                                             | 2      |
+| ✅     | Réponses au format JSON                                              | 0.5    |
+| ❌     | Validation des modifications via ETag                                | 3      |
+| ✅     | 13 points d'entrée                                                   | 13     |
