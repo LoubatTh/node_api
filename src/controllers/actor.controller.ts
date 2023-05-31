@@ -1,6 +1,9 @@
 import { PrismaClient, actors } from "@prisma/client";
 import { Request, Response } from "express";
 
+// var fresh = require('fresh');
+// var etag = require('etag');
+
 const prisma = new PrismaClient().actors;
 
 // GET /actor
@@ -122,5 +125,16 @@ exports.deleteActor = async (req: Request, res: Response) => {
     res.status(204).json(actor);
   } catch (e: any) {
     res.status(500).json({ message: e.message });
+  }
+};
+
+// check if ETag is fresh
+exports.isFresh = async (req: Request, res: Response) => {
+  try {
+    let reqHeader = { 'if-match': req.headers['if-match'] };
+    let resHeader = { 'etag': etag(JSON.stringify(req.body)) };
+    fresh(reqHeader, resHeader);
+  } catch (e: any) {
+    res.status(412).json({ message: e.message });
   }
 };
