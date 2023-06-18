@@ -3,7 +3,7 @@
 ## Description
 
 L’objectif de ce projet est de réaliser une API de gestion de base de données de Films en
-NodeJS avec le framework Express selon les spécifications suivantes.
+NodeJS avec le framework Express.js.
 
 ## Lancer le projet
 
