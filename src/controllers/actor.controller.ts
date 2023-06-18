@@ -128,13 +128,13 @@ exports.deleteActor = async (req: Request, res: Response) => {
   }
 };
 
-// check if ETag is fresh
-exports.isFresh = async (req: Request, res: Response) => {
-  try {
-    let reqHeader = { 'if-match': req.headers['if-match'] };
-    let resHeader = { 'etag': etag(JSON.stringify(req.body)) };
-    fresh(reqHeader, resHeader);
-  } catch (e: any) {
-    res.status(412).json({ message: e.message });
-  }
-};
+// // check if ETag is fresh
+// exports.isFresh = async (req: Request, res: Response) => {
+//   try {
+//     let reqHeader = { 'if-match': req.headers['if-match'] };
+//     let resHeader = { 'etag': etag(JSON.stringify(req.body)) };
+//     fresh(reqHeader, resHeader);
+//   } catch (e: any) {
+//     res.status(412).json({ message: e.message });
+//   }
+// };
